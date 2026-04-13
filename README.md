@@ -8,7 +8,7 @@ the manuscript:
 > **A conserved surface polysaccharide degradation module in Phapecoctavirus
 > is associated with differential anti-biofilm activity against
 > ESBL-producing *Escherichia coli***
-> Laura [Apellido] et al. — submitted to *Communications Biology*, 2026
+> AUTORES — to be submitted to *Communications Biology*, 2026
 
 Two lytic bacteriophages isolated from hospital wastewater (Hospital
 Universitario Infanta Elena, Valdemoro, Madrid) were characterized: F58V
@@ -142,24 +142,7 @@ Top-ranked model: ipTM = 0.90. Structural superposition against PDB 6E0V
 (colanidase gp150, phage Phi92) in UCSF ChimeraX 1.8: RMSD = 0.905 Å.
 Four candidate catalytic residues identified: D554, Y562, W578, D656
 (pLDDT > 95). AlphaFold3 model output files (.cif, confidence JSON) are
-available upon request [or: deposited at Zenodo, DOI: xx.xxxx/zenodo.xxxxxxx].
-
----
-
-## Analyses not represented by output files in this repository
-
-The following analyses were performed via web servers; results are described
-in the manuscript and supplementary methods but raw output files were not
-systematically archived:
-
-- **VIRIDIC v1.1** — intergenomic similarity (F58V vs. 24 *Phapecoctavirus*;
-  F63V vs. 24 Drexlerviridae)
-- **InterProScan 5.64** — domain architecture of all CDS (Pfam, TIGRFAM,
-  CDD, SUPERFAMILY, Gene3D, SMART, PANTHER)
-- **HHpred** — remote homology validation for three proteins of uncertain
-  function (PDB_mmCIF70 + Pfam-A)
-- **FoldSeek** — structural similarity search (PDB100 + SwissProt)
-- **clinker v0.0.28** — synteny analysis across 5 representative genomes
+PENDIENTE deposited at Zenodo, DOI:.
 
 ---
 
@@ -167,17 +150,22 @@ systematically archived:
 
 | Tool | Version | Reference |
 |---|---|---|
-| Pharokka | 1.3.2 | Bouras et al. 2023 |
+| Pharokka | 1.7.1 | Bouras et al. 2023 |
 | MAFFT | 7.505 | Katoh & Standley 2013 |
+| BLAST+ | 2.12.0 | Camacho et al. 2009 |
 | IQ-TREE | 2.3.6 | Nguyen et al. 2015 |
+| trimAl | 1.5.rev1 | Capella-Gutierrez et al. 2009 |
 | UFBoot2 | — | Hoang et al. 2018 |
 | PAML (codeml) | 4.10.7 | Yang 2007 |
 | VIRIDIC | 1.1 | Moraru et al. 2020 |
 | AlphaFold3 | server | Abramson et al. 2024 |
-| UCSF ChimeraX | 1.8 | Meng et al. 2023 |
-| clinker | 0.0.28 | Gilchrist & Chooi 2021 |
-| CARD RGI | — | Alcock et al. 2023 |
-| VFDB | — | Liu et al. 2022 |
+| ChimeraX | 1.11.1 | Meng et al. 2023 |
+| InterProScan | 5.77-108.0 | Jones et al. 2014 |
+| FoldSeek | server | van Kempen et al. 2023 |
+| HHpred | PDB_mmCIF70_20_Feb Pfam-A_v38.2 | Zimmermann et al. 2018 |
+| clinker | 0.0.32 | Gilchrist & Chooi 2021 |
+| CARD RGI | RGI 6.0.5, CARD 4.0.1 | Alcock et al. 2023 |
+| VFDB | server | Liu et al. 2022 |
 | MinCED | — | via Pharokka |
 
 ---
