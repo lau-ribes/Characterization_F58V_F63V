@@ -33,14 +33,14 @@ Assembled genome sequences in FASTA format.
   24 *Phapecoctavirus* reference genomes used in comparative analyses
 
 ### `/annotation`
-Pharokka v1.3.2 outputs (PHANOTATE gene prediction, PHROGs functional
+Pharokka v1.7.1 outputs (PHANOTATE gene prediction, PHROGs functional
 annotation, tRNAscan-SE 2.0, MASH/INPHARED taxonomy).
 - `F58V_pharokka.gbk` / `F63V_pharokka.gbk` — annotated genomes (GenBank format)
 - `F58V_proteins.faa` / `F63V_proteins.faa` — predicted protein sequences
 - `F58V_CDS_nt.ffn` / `F63V_CDS_nt.ffn` — CDS nucleotide sequences
 
 #### `/annotation/InterProScan`
-InterProScan 5.64 domain architecture analysis of all predicted proteins.
+InterProScan 5.77 domain architecture analysis of all predicted proteins.
 Applications run: Pfam, Gene3D, SUPERFAMILY, PANTHER, CDD, PRINTS, NCBIfam, 
 ProSiteProfiles, SMART, PIRSF, MobiDBLite, Coils, TMHMM, Phobius, SignalP. 
 Reclassification threshold: E-value < 1×10⁻⁵ consistent across ≥2 member 
@@ -134,12 +134,12 @@ Outputs (top-ranked model by ipTM):
 - `fold_2026_03_18_19_32_unpaired_msa_chains_c_a_b.a3m` — unpaired MSA
 
 Key quality metrics: ipTM = 0.90. Structural superposition against PDB 6E0V
-(colanidase gp150, phage Phi92) in UCSF ChimeraX 1.8: RMSD = 0.905 Å.
+(colanidase gp150, phage Phi92) in UCSF ChimeraX 1.11.1: RMSD = 0.905 Å.
 Candidate catalytic residues: D554, Y562, W578, D656 (pLDDT > 95).
 
 AlphaFold3 modeling was performed on the public server (alphafoldserver.com).
 Top-ranked model: ipTM = 0.90. Structural superposition against PDB 6E0V
-(colanidase gp150, phage Phi92) in UCSF ChimeraX 1.8: RMSD = 0.905 Å.
+(colanidase gp150, phage Phi92) in UCSF ChimeraX 1.11.1: RMSD = 0.905 Å.
 Four candidate catalytic residues identified: D554, Y562, W578, D656
 (pLDDT > 95). AlphaFold3 model output files (.cif, confidence JSON) are
 PENDIENTE deposited at Zenodo, DOI:.
