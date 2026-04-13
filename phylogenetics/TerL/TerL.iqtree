@@ -1,0 +1,126 @@
+IQ-TREE 2.3.6 built Aug  1 2024
+
+Input file name: orthologs_TerL_codon.fna
+Type of analysis: tree reconstruction
+Random seed number: 348277
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 10 sequences with 2073 nucleotide sites
+Number of constant sites: 1979 (= 95.4655% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 1979 (= 95.4655% of all sites)
+Number of parsimony informative sites: 57
+Number of distinct site patterns: 69
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: GTR+F+G4
+
+Rate parameter R:
+
+  A-C: 0.8014
+  A-G: 4.1626
+  A-T: 0.1165
+  C-G: 0.1633
+  C-T: 10.0826
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.3338
+  pi(C) = 0.1735
+  pi(G) = 0.2039
+  pi(T) = 0.2889
+
+Rate matrix Q:
+
+  A   -0.5606   0.07633    0.4658   0.01847
+  C    0.1468    -1.764   0.01828     1.599
+  G    0.7626   0.01556   -0.9367    0.1586
+  T   0.02134    0.9603    0.1119    -1.094
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.02004
+
+ Category  Relative_rate  Proportion
+  1         5.057e-31      0.25
+  2         1.064e-15      0.25
+  3         9.778e-07      0.25
+  4         4              0.25
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -3639.3822 (s.e. 80.9705)
+Unconstrained log-likelihood (without tree): -3430.7216
+Number of free parameters (#branches + #model parameters): 26
+Akaike information criterion (AIC) score: 7330.7644
+Corrected Akaike information criterion (AICc) score: 7331.4506
+Bayesian information criterion (BIC) score: 7477.3200
+
+Total tree length (sum of branch lengths): 0.0725
+Sum of internal branch lengths: 0.0304 (41.8999% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'F58V' is drawn at root
+
++--------------F58V
+|
+|                                  +----MZ726793.1
+|                               +--|
+|                               |  +--MN850598.1
+|                            +--|
+|                            |  +--OR437326.1
+|                         +--|
+|                         |  |  +---------OP172792.1
+|                         |  +--|
+|                         |     +---MT944117.1
+|            +------------|
+|            |            +----------------JX561091.1
++------------|
+|            |                           +--MH252123.1
+|            +---------------------------|
+|                                        +----------------OM386656.1
+|
++-------------KX664695.3
+
+Tree in newick format:
+
+(F58V:0.0071048895,(((((MZ726793.1:0.0023419134,MN850598.1:0.0012736349):0.0009711350,OR437326.1:0.0013343365):0.0013359128,(OP172792.1:0.0048187888,MT944117.1:0.0020290058):0.0015382012):0.0012943838,JX561091.1:0.0078553728):0.0060100069,(MH252123.1:0.0010451799,OM386656.1:0.0079503643):0.0130531969):0.0061914309,KX664695.3:0.0063925010);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t tree_TerL.treefile -m "GTR{0.801387,4.16258,0.116468,0.16333,10.0826}+F{0.333767,0.173517,0.203859,0.288857}+G4{0.0200393}" --length 2073
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s orthologs_TerL_codon.fna --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s orthologs_TerL_codon.fna --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Fri Mar 27 13:56:38 2026
+Total CPU time used: 2.28 seconds (0h:0m:2s)
+Total wall-clock time used: 2.86814 seconds (0h:0m:2s)
+

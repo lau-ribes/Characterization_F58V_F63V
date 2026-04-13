@@ -1,0 +1,115 @@
+Query         Q_5018158
+Match_columns 353
+No_of_seqs    230 out of 388
+Neff          7.5081
+Searched_HMMs 105694
+Date          Fri Mar 27 06:01:58 2026
+Command       hhsearch -cpu 8 -i ../results/full.a3m -d /cluster/toolkit/production/databases/hh-suite/pfama/pfama -d /cluster/toolkit/production/databases/hh-suite/mmcif70/pdb70 -o ../results/5018158.hhr -oa3m ../results/5018158.a3m -p 20 -Z 250 -loc -z 1 -b 1 -B 250 -ssm 2 -sc 1 -seq 1 -dbstrlen 10000 -norealign -maxres 32000 -contxt /cluster/toolkit/production/bioprogs/tools/hh-suite-build-new/data/context_data.crf 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5YVQ_A Tail fiber protein S; b  97.7 0.00019 1.8E-09   72.0   6.9   68  278-353   436-503 (504)
+  2 9CUY_d Short tail fiber; basep  97.2  0.0015 1.4E-08   67.9   6.2   70    1-70      1-71  (554)
+  3 8JU3_A Tail fiber protein S,Ta  96.5   0.012 1.1E-07   59.0   6.4   66  278-353   422-487 (488)
+  4 4A0T_C TAIL FIBER PROTEIN; VIR  95.8   0.023 2.2E-07   54.6   4.0   39  311-353   153-195 (228)
+  5 9NDY_T LTF platform protein (g  93.4    0.28 2.6E-06   40.8   4.2   48    6-55      1-49  (100)
+  6 9JYZ_E Tail fiber protein; Com  92.2    0.33 3.1E-06   52.8   4.0   39  311-353   478-520 (553)
+  7 9CUY_d Short tail fiber; basep  91.1    0.98 9.3E-06   47.6   5.9   71  283-353   484-554 (554)
+
+No 1
+>5YVQ_A Tail fiber protein S; bacteriophage, VIRAL PROTEIN; HET: GOL; 2.103A {Escherichia phage Mu}
+Probab=97.69  E-value=0.00019  Score=72.00  Aligned_cols=68  Identities=25%  Similarity=0.416  Sum_probs=44.6  Template_Neff=12.800
+
+Q ss_pred             cccccceEeEeeceeecceecCCCCccccccccCCcEEEEEEEEeCCCCCcccccCceeEeeeEEEeCCcEEeCCC
+Q Q_5018158       278 YNYANGTFVRDIRYTSQGVYYPPGNEVSWTYICSSGYVLSGIIVQETGRSSADNIGGVYFKRLQRNVNGNWYDIGG  353 (353)
+Q Consensus       278 ~~~~~VqdiRlG~~~~~~~~~~~g~~~~~~~~~~~G~vltgi~~~~~~~~~~~~i~~~~~rpiQk~INGtW~tv~~  353 (353)
+                      +..+||+++|++......       ...|.+..+.||+++++...+.... ....+.++|||+||+|+|.||+|+.
+T Consensus       436 ~~~~~v~~i~~g~~~~~~-------~~~~~~~~~~G~~~tg~~~~~~~~~-~~~~~~~~~r~~q~~ing~W~~v~~  503 (504)
+T 5YVQ_A          436 FDSRYVRDVRLGTQSLTG-------GLSRDYKAPSGHVITGFHTNGDWEM-QGGDDKVYIRPVQKNINGTWYNVAS  503 (504)
+T ss_dssp             HHTTSEEEEEECCCEECC-------SCCSCCCCCTTEEEEEEEC----------CCEEEEEEEEEEETTEEEECCC
+T ss_pred             cccceeEeEEeeceEEeC-------CcccceecCCceEEEEEEEcCcccc-cCCCcceeEeeehhhcCCeEEEccc
+Confidence            468899999999754322       1124445678999999875432000 1112358999999999999999974
+
+
+No 2
+>9CUY_d Short tail fiber; baseplate, Sheath, Tube, PhiTE, Virus, Phage, VIRAL PROTEIN, sheath initiator, tube initiator, hub, puncture apparatus, fibers; 3.24A {Pectobacterium phage phiTE}
+Probab=97.17  E-value=0.0015  Score=67.87  Aligned_cols=70  Identities=40%  Similarity=0.662  Sum_probs=0.0  Template_Neff=11.800
+
+Q ss_pred             CCCcccCCc-chhcCcCCCCCCCCCCcccccchhhcccccCCCCCHHHHHHHHHHHHHHHHHHHhccCCCC
+Q Q_5018158         1 MAKPIYYPD-WATQTVTLPGTLNTNKIRPKETIRTVGMDYGQIMTCEEMNWILNNIGLWIRYLVDDFLPTL   70 (353)
+Q Consensus         1 ~~~p~~~~~-~~~~~~~~p~~~~~~~~~~~~dl~~~~~d~g~~~~~~~~n~l~~~i~~~~~~~~~~~~~~l   70 (353)
+                      ||+|...+. |++....+|.+..+++..|+.++...+|+.+.+|..+.+|++++.+..|++++....++.+
+T Consensus         1 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~g~~~~~~p~~~~~n~~~~~~~~~~~~~~~~g~~~~   71 (554)
+T 9CUY_d            1 MAKPKDPIYVWAAADVNLPGTGRPNKSKPIDDLLAKGYDKGQKPAAEEFNYILNMSSAWVNWIVNEKFPEL   71 (554)
+T ss_dssp             --CCCSCCCCSSCSCCBCTTTCSBSCCCCCHHHHHHCCCSSCCCCHHHHHHHHHHHHHHHHCCCCCCHHHH
+T ss_pred             CCCCCCCceeccccCCCCCCCCCCCCCCChHHHHHcCCCCCCCchHHHHHHHHHHHHHHHHHHHHccchhh
+
+
+No 3
+>8JU3_A Tail fiber protein S,Tail fiber protein S'; bacteriophage, VIRAL PROTEIN; 2.0A {Escherichia phage Mu}
+Probab=96.53  E-value=0.012  Score=59.05  Aligned_cols=66  Identities=24%  Similarity=0.300  Sum_probs=0.0  Template_Neff=12.900
+
+Q ss_pred             cccccceEeEeeceeecceecCCCCccccccccCCcEEEEEEEEeCCCCCcccccCceeEeeeEEEeCCcEEeCCC
+Q Q_5018158       278 YNYANGTFVRDIRYTSQGVYYPPGNEVSWTYICSSGYVLSGIIVQETGRSSADNIGGVYFKRLQRNVNGNWYDIGG  353 (353)
+Q Consensus       278 ~~~~~VqdiRlG~~~~~~~~~~~g~~~~~~~~~~~G~vltgi~~~~~~~~~~~~i~~~~~rpiQk~INGtW~tv~~  353 (353)
+                      +..++++.+|++.......+..      ..|..+.||++++....+.    .+....+++||+|++|+|.|+++++
+T Consensus       422 ~~~~~~~~~~~g~~~~~~~~~~------~~~~~~~g~~~t~~~~~~~----~~~~~~~~~~~~~~~i~g~w~~~~~  487 (488)
+T 8JU3_A          422 CNSRFITGIRLGGLSSVQTWNG------PGWSDRSGYVVTGSVNGNR----DELIDTTQARPIQYCINGTWYNAGS  487 (488)
+T ss_dssp             HHHHSEEEEEECCCEEEEC----------CCCCCTTEEEEEEC------------CEEEEEEEEEEETTEEEECCC
+T ss_pred             cccceeecEEecCceeeeeecC------CCccCCCcEEEEeeecCCh----hhccccceeeeeeEeeCCEEEecCC
+
+
+No 4
+>4A0T_C TAIL FIBER PROTEIN; VIRAL PROTEIN, CAUDOVIRALES, PODOVIRIDAE, BETA-HELIX, BETA-SANDWICH; HET: 1PE, TMO; 1.9A {ENTEROBACTERIA PHAGE T7}
+Probab=95.77  E-value=0.023  Score=54.60  Aligned_cols=39  Identities=13%  Similarity=0.135  Sum_probs=0.0  Template_Neff=7.500
+
+Q ss_pred             CCcEEEEEEEEeCCCCCcccc--cCce--eEeeeEEEeCCcEEeCCC
+Q Q_5018158       311 SSGYVLSGIIVQETGRSSADN--IGGV--YFKRLQRNVNGNWYDIGG  353 (353)
+Q Consensus       311 ~~G~vltgi~~~~~~~~~~~~--i~~~--~~rpiQk~INGtW~tv~~  353 (353)
+                      +.||+++++.....    .+.  ++.+  +|||+|++|+|+|++|++
+T Consensus       153 ~~G~vlTG~~~~~~----~~~~~i~~~~~~~rpiQ~~inG~W~~i~~  195 (228)
+T 4A0T_C          153 AGGGVSVTVSQDLR----FRNIWIKCANNSWNFFRTGPDGIYFIASD  195 (228)
+T ss_dssp             CCTTCEEECSSCCT----TCEEEEECGGGCEEEEECCSSEEEEECCT
+T ss_pred             CCceeEEeeEeCCc----ccceeeeccccceeeeeeccCCeEEEecC
+
+
+No 5
+>9NDY_T LTF platform protein (gp025); baseplate, wedge, hub, puncture apparatus, sheath initiator, tube initiator, tape measure protein, LTF-platform, spacer, phage, bacteriophage; 3.83A {Escherichia phage JohannRWettstein}
+Probab=93.45  E-value=0.28  Score=40.83  Aligned_cols=48  Identities=27%  Similarity=0.336  Sum_probs=0.0  Template_Neff=3.400
+
+Q ss_pred             cCCc-chhcCcCCCCCCCCCCcccccchhhcccccCCCCCHHHHHHHHHHH
+Q Q_5018158         6 YYPD-WATQTVTLPGTLNTNKIRPKETIRTVGMDYGQIMTCEEMNWILNNI   55 (353)
+Q Consensus         6 ~~~~-~~~~~~~~p~~~~~~~~~~~~dl~~~~~d~g~~~~~~~~n~l~~~i   55 (353)
+                      .... |+..+ ..| ...++|..|...+...||-.|++++.+++|||++-|
+T Consensus         1 ~~m~swA~~D-v~y-dg~~NK~~Pp~EiQa~GFk~Gdpl~aq~LNyIlNDL   49 (100)
+T 9NDY_T            1 MAFLNWSTDE-VDA-DGNQLKVLPPPEIQATGLLRGEPMGRQWFNYILNYL   49 (100)
+T ss_dssp             CCCCCCCCCS-BCT-TSCBSSCCCCHHHHHHCCCSSCCCTTTSHHHHHHHH
+T ss_pred             CCcccccccc-cCC-CCCcccCCCCHHHHhcCCCCCCcccHHHHHHHHHHH
+
+
+No 6
+>9JYZ_E Tail fiber protein; Complex, VIRAL PROTEIN; 2.7A {Escherichia phage T7}
+Probab=92.16  E-value=0.33  Score=52.84  Aligned_cols=39  Identities=13%  Similarity=0.115  Sum_probs=0.0  Template_Neff=8.900
+
+Q ss_pred             CCcEEEEEEEEeCCCCCccccc--Cc-e-eEeeeEEEeCCcEEeCCC
+Q Q_5018158       311 SSGYVLSGIIVQETGRSSADNI--GG-V-YFKRLQRNVNGNWYDIGG  353 (353)
+Q Consensus       311 ~~G~vltgi~~~~~~~~~~~~i--~~-~-~~rpiQk~INGtW~tv~~  353 (353)
+                      +.|||++++.....    .+.+  +. + +|||+|++|+|.|++|.+
+T Consensus       478 ~~G~v~tg~~~~~~----~~~~~~~~~~~~~r~iq~~ing~w~~~~~  520 (553)
+T 9JYZ_E          478 AGGGVSVTVSQDLR----FRNIWIKCANNSWNFFRTGPDGIYFIASD  520 (553)
+T ss_pred             CCCceEEEEEecCc----ccceeeeccccceeeEEEcCCCeEEEecC
+
+
+No 7
+>9CUY_d Short tail fiber; baseplate, Sheath, Tube, PhiTE, Virus, Phage, VIRAL PROTEIN, sheath initiator, tube initiator, hub, puncture apparatus, fibers; 3.24A {Pectobacterium phage phiTE}
+Probab=91.05  E-value=0.98  Score=47.57  Aligned_cols=71  Identities=44%  Similarity=0.631  Sum_probs=0.0  Template_Neff=11.800
+
+Q ss_pred             ceEeEeeceeecceecCCCCccccccccCCcEEEEEEEEeCCCCCcccccCceeEeeeEEEeCCcEEeCCC
+Q Q_5018158       283 GTFVRDIRYTSQGVYYPPGNEVSWTYICSSGYVLSGIIVQETGRSSADNIGGVYFKRLQRNVNGNWYDIGG  353 (353)
+Q Consensus       283 VqdiRlG~~~~~~~~~~~g~~~~~~~~~~~G~vltgi~~~~~~~~~~~~i~~~~~rpiQk~INGtW~tv~~  353 (353)
+                      ....++.................|.+..+.|+++++........+.....+.+||+++|++|+|.|+++..
+T Consensus       484 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~g~~~~g~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  554 (554)
+T 9CUY_d          484 VQDNRLGAVGSYIPPSPSSNVMSWTFQAPQGCALTGIIVQENESNSGDNIGGVYYKPIQKKVNGVWVTITG  554 (554)
+T ss_dssp             -----------------------------------------------------------------------
+T ss_pred             cCCCccccccccCCCCCCCCceeeeecCCCeeeeeeEEEecCCCCCCcceeeeEEeeeEEEECCEEEecCC
+
+
