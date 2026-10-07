@@ -7,12 +7,12 @@ the manuscript:
 
 > **Phage depolymerase specificity shapes treatment outcomes for preformed
 > biofilms in ESBL-producing *Escherichia coli***
-> Ribes-Martinez et al. — submitted to *Communications Biology*, 2026
+> Ribes-Martinez et al. — submitted to *Scientific Reports*, 2026
 
 Two lytic bacteriophages isolated from hospital wastewater (Hospital
 Universitario Infanta Elena, Valdemoro, Madrid) were characterized: F58V
 (*Phapecoctavirus*, Straboviridae, ~149 kb myovirus) and F63V (proposed new
-genus *Ribesvirus* gen. nov., Drexlerviridae/Braunvirinae, ~46 kb siphovirus),
+genus *Aunosvirus* gen. nov., Drexlerviridae/Braunvirinae, ~46 kb siphovirus),
 both targeting ESBL-producing *E. coli* clinical isolates.
 
 The central argument is that the distinct substrate specificities of the
@@ -52,8 +52,7 @@ Structure-aware functional reannotation with phold v1.2.0 (Foldseek + ProstT5)
 on top of the Pharokka output. Increases the proportion of CDSs with a
 specific functional assignment from 78 (24.9%) to 102 (32.6%) in F58V, and
 from 35 (42.2%) to 42 (50.6%) in F63V. Zero CDSs were assigned to the PHROG
-category "integration and excision" in either genome, supporting the strict
-lytic lifestyle.
+category "integration and excision" in either genome, supporting a predicted virulent lifestyle.
 - `F58V-phold_per_cds_predictions.tsv`
 - `F63V-phold_per_cds_predictions.tsv`
 
@@ -122,7 +121,7 @@ D434) lie outside the catalytic pocket.
 AlphaFold3 model of CDS_0012 C-terminal effector domain (residues 344-1017),
 C3-symmetric homotrimer. ipTM = 0.90, pTM = 0.91. Superposition vs. PDB 6E0V
 (ChimeraX 1.11.1): RMSD 0.905 A full chain, 0.732 A catalytic domain, crystal
-control 0.248 A. AF3 model output deposited at Zenodo (DOI: PENDIENTE).
+control 0.248 A.
 
 ---
 
@@ -135,7 +134,7 @@ control 0.248 A. AF3 model output deposited at Zenodo (DOI: PENDIENTE).
 | BACPHLIP | 0.9.6 | Hockenberry & Wilke 2021 |
 | MAFFT | 7.520 | Katoh & Standley 2013 |
 | BLAST+ | 2.17 | Camacho et al. 2009 |
-| IQ-TREE | 2.2.0 | Minh et al. 2020 |
+| IQ-TREE | 2.3.6 | Minh et al. 2020 |
 | trimAl | 1.5.rev1 | Capella-Gutierrez et al. 2009 |
 | UFBoot2 / SH-aLRT | - | Hoang et al. 2018 |
 | PAML (codeml) | 4.10.7 | Yang 2007 |
