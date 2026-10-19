@@ -1,13 +1,13 @@
-# Genomic and in silico analyses — bacteriophages F58V and F63V
+# Genomic and in silico analyses: bacteriophages F58V and F63V
 
 ## Overview
 
 This repository holds the input files and primary outputs of the bioinformatic
 analyses supporting the manuscript:
 
-> **Phage depolymerase specificity shapes treatment outcomes for preformed
-> biofilms in ESBL-producing *Escherichia coli***
-> Ribes-Martinez et al., *Scientific Reports* (under review, 2026)
+> **Depolymerase architecture parallels activity against preformed biofilms
+> in two phages of ESBL-producing *Escherichia coli***
+> Ribes-Martinez et al., *Scientific Reports* (in revision, 2026)
 
 Two lytic bacteriophages isolated from hospital wastewater (Hospital
 Universitario Infanta Elena, Valdemoro, Madrid) were characterized against
@@ -64,9 +64,9 @@ duplicate-detection table is in `blast_results/conservation/`.
 
 ### `/genomes`
 
-- `F58V.fasta` — F58V complete genome, 149,321 bp, GC 39.0%.
-- `F63V.fasta` — F63V complete genome, 45,748 bp, GC 44.1%.
-- `all_phapecoctavirus_accessions.txt` — the 46 GenBank accessions of the
+- `F58V.fasta`: F58V complete genome, 149,321 bp, GC 39.0%.
+- `F63V.fasta`: F63V complete genome, 45,748 bp, GC 44.1%.
+- `all_phapecoctavirus_accessions.txt`: the 46 GenBank accessions of the
   tBLASTn reference set. These are exactly the 46 subject genomes present in
   `blast_results/blast_all_cds.tsv`.
 
@@ -75,9 +75,9 @@ duplicate-detection table is in `blast_results/conservation/`.
 Pharokka v1.3.2 outputs (PHANOTATE gene calling, PHROGs functional assignment,
 tRNAscan-SE, mash-based placement against INPHARED).
 
-- `F58V_pharokka.gbk` / `F63V_pharokka.gbk` — annotated genomes (GenBank).
-- `F58V_proteins.faa` / `F63V_proteins.faa` — predicted proteins.
-- `F58V_CDS_nt.ffn` / `F63V_CDS_nt.ffn` — CDS nucleotide sequences.
+- `F58V_pharokka.gbk` / `F63V_pharokka.gbk`: annotated genomes (GenBank).
+- `F58V_proteins.faa` / `F63V_proteins.faa`: predicted proteins.
+- `F58V_CDS_nt.ffn` / `F63V_CDS_nt.ffn`: CDS nucleotide sequences.
 
 Of the 313 F58V CDS, 276 (88.2%) matched a PHROG entry and 78 (24.9%) carried a
 specific functional product at the Pharokka stage. For F63V the corresponding
@@ -152,16 +152,16 @@ percentile of that distribution.
 The computation behind the conservation claim for CDS_0012, deposited so that
 the figures in the Results can be reproduced step by step.
 
-- `blastp_CDS_0012_vs_nr.tsv` — BLASTp of CDS_0012 against the NCBI
+- `blastp_CDS_0012_vs_nr.tsv`: BLASTp of CDS_0012 against the NCBI
   non-redundant protein database.
-- `tblastn_CDS_0012_65subjects.tsv` — the 65 *Phapecoctavirus* subject genomes
+- `tblastn_CDS_0012_65subjects.tsv`: the 65 *Phapecoctavirus* subject genomes
   that search returned.
-- `duplicados_en_tblastn_65subjects.tsv` — the genome-length matching that
+- `duplicados_en_tblastn_65subjects.tsv`: the genome-length matching that
   identifies RefSeq copies of genomes already present under their GenBank
   accession, which reduces those 65 to the 52 non-redundant genomes reported.
-- `conservacion_CDS_0012_46genomas.tsv` — per-genome identity and summed-HSP
+- `conservacion_CDS_0012_46genomas.tsv`: per-genome identity and summed-HSP
   query coverage across the 46-genome reference set.
-- `calcular_conservacion_CDS_0012.py`, `null_distribution_metodo.py` — the two
+- `calcular_conservacion_CDS_0012.py`, `null_distribution_metodo.py`: the two
   scripts that produce the tables above and the null distribution.
 
 ### `/phylogenetics`
@@ -176,7 +176,7 @@ Alignments contain F58V plus ten *Phapecoctavirus* genomes, except TerL with
 nine. Inferred with IQ-TREE v2.3.6 under GTR+F+G4, selected by ModelFinder for
 all eleven genes.
 
-`/phylogenetics/F63V_single_gene` — TerL and major capsid protein trees for
+`/phylogenetics/F63V_single_gene`: TerL and major capsid protein trees for
 F63V and its candidate relatives (Supplementary Figure 2). IQ-TREE v2.3.6,
 1,000 ultrafast bootstrap and 1,000 SH-aLRT replicates. The deposited runs are
 the fixed LG+F+G4 analyses; the ModelFinder-selected models reported in the
@@ -185,7 +185,7 @@ topology. TerL groups F63V with ES10, AN_ECEAS and IMM-001 (MF630922); MCP
 instead groups F63V with *Loudonvirus* DTL, the single-gene discordance
 discussed in the manuscript.
 
-`/phylogenetics/F58V_whole_genome` and `/phylogenetics/F63V_whole_genome` — the
+`/phylogenetics/F58V_whole_genome` and `/phylogenetics/F63V_whole_genome`: the
 two whole-genome maximum-likelihood analyses of Figure 4a and Figure 4b. Each
 directory holds the IQ-TREE report (`.iqtree`), the run log, the consensus tree
 (`.contree`), the ML tree (`.tree`) and the rendered figure as PNG, PDF and SVG.
@@ -253,7 +253,7 @@ selected site class in the depolymerase. Absolute ω values depend on the
 composition of the reference set, so comparisons should be read as
 within-analysis contrasts between genes.
 
-`/selection_analysis/M3_per_site` — M3 (K = 3) NEB per-site dN/dS profiles
+`/selection_analysis/M3_per_site`: M3 (K = 3) NEB per-site dN/dS profiles
 (Supplementary Figure 1): `*_M3.out`, `*_M3_rst_persite.txt`,
 `Suppl_Fig_dNdS_persite.{pdf,svg}`. The four predicted catalytic residues
 (D554, Y562, W578, D656) fall in the most constrained site class; the only two
@@ -272,13 +272,13 @@ retained after iterative pruning, 0.732 Å over 222 of 264 pairs for the
 catalytic domain alone, against a crystal-to-crystal control (6E0V chain A vs.
 6E0W chain A) of 0.248 Å over all 602 pairs.
 
-- `F58V_depolymerase_AlphaFold.fasta` — input sequence.
-- `fold_2026_03_18_19_32_model_1.cif` — predicted structure.
+- `F58V_depolymerase_AlphaFold.fasta`: input sequence.
+- `fold_2026_03_18_19_32_model_1.cif`: predicted structure.
 - `fold_2026_03_18_19_32_summary_confidences_1.json`,
-  `fold_2026_03_18_19_32_full_data_1.json` — confidence metrics, including the
+  `fold_2026_03_18_19_32_full_data_1.json`: confidence metrics, including the
   per-residue pLDDT values quoted in the manuscript.
 - `fold_2026_03_18_19_32_paired_msa_chains_c_a_b.a3m`,
-  `..._unpaired_msa_chains_c_a_b.a3m`, `..._template_hit_1_chains_c_a_b.cif` —
+  `..._unpaired_msa_chains_c_a_b.a3m`, `..._template_hit_1_chains_c_a_b.cif`:
   MSAs and template hit returned by the server.
 
 `/structural/foldseek` holds the structural similarity search that identified
@@ -288,9 +288,9 @@ database build date, the Foldseek commit and the exact command.
 
 ### `/figures`
 
-- `figura2.R` — the script that draws the Figure 2 domain architecture diagram,
+- `figura2.R`: the script that draws the Figure 2 domain architecture diagram,
   ggplot2 v3.4.4 under R v4.3.3.
-- `dominios.tsv` — the domain and fold boundaries it draws, taken from the
+- `dominios.tsv`: the domain and fold boundaries it draws, taken from the
   InterProScan and HHpred outputs in `/annotation`.
 
 ---
@@ -339,4 +339,4 @@ in the supplementary information.
 
 ## Contact
 
-Laura Ribes-Martinez — lauraribes@outlook.com
+Laura Ribes-Martinez, lauraribes@outlook.com
