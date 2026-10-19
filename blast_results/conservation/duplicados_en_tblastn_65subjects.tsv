@@ -1,0 +1,23 @@
+# Subjects presentes en tblastn_CDS_0012_65subjects.tsv y ausentes del conjunto de 46.
+# Se empareja por longitud de genoma: una coincidencia exacta indica que el subject
+# es la copia RefSeq de un genoma ya presente bajo su accesion GenBank.
+subject_extra	genome_length_bp	duplicado_de	veredicto
+LC739533.1	154443	-	genoma nuevo
+LC739534.1	154550	-	genoma nuevo
+LC739535.1	154550	-	genoma nuevo
+LC739537.1	149831	-	genoma nuevo
+LC739539.1	150689	-	genoma nuevo
+NC_020079.1	147737	JX561091.1	duplicado
+NC_047770.1	149813	KX552041.2	duplicado
+NC_047776.2	149268	KX664695.3	duplicado
+NC_047994.1	150925	MH252123.1	duplicado
+NC_048196.1	151194	MK373788.1	duplicado
+NC_052654.1	151671	MH051333.1	duplicado
+NC_052656.1	149335	MN850648.1	duplicado
+NC_052658.1	151514	MN850571.1	duplicado
+NC_052659.1	144998	MN850598.1	duplicado
+NC_052660.1	150473	MN850618.1	duplicado
+NC_052661.1	150947	MN850565.1	duplicado
+NC_052662.1	151202	MT496970.1	duplicado
+NC_062742.1	150892	MW175890.1	duplicado
+OP562383.1	148647	-	genoma nuevo

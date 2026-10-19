@@ -1,0 +1,13 @@
+proteina	fago	longitud	pista	etiqueta	inicio	fin	clave	fuente
+CDS_0012	F58V	1017	dominio	Tail fibre N-terminal (PF26208)	10	113	fibra	InterProScan v5.77 Pfam-A
+CDS_0012	F58V	1017	dominio	TSP1/Gp66 receptor binding (PF18668)	302	361	tsp1	InterProScan v5.77 Pfam-A
+CDS_0012	F58V	1017	plegamiento	Pectin lyase-like (SSF51126)	389	663	pectina	InterProScan v5.77 SUPERFAMILY
+CDS_0012	F58V	1017	dominio	WcaM colanic acid (PF27800)	502	662	wcam	InterProScan v5.77 Pfam-A
+CDS_0056	F63V	844	plegamiento	Pectin lyase-like (SSF51126)	355	675	pectina	InterProScan v5.77 SUPERFAMILY
+CDS_0056	F63V	844	estructura	Depolymerase 7VYV chain B (99.9%)	1	485	hh7vyv	HHpred PDB_mmCIF70
+CDS_0015	F58V	353	estructura	Short tail fibre 9CUY (97.2%)	1	70	hh9cuy	HHpred PDB_mmCIF70
+CDS_0015	F58V	353	estructura	Tail fibre protein S 5YVQ chain A (97.7%)	278	353	hh5yvq	HHpred PDB_mmCIF70
+CDS_0019	F58V	921	dominio	Endosialidase N-terminal extension (PF12218)	76	142	endoflank	InterProScan v5.77 Pfam-A
+CDS_0019	F58V	921	dominio	Endosialidase catalytic beta-propeller (PF12217)	143	600	endocat	InterProScan v5.77 Pfam-A
+CDS_0019	F58V	921	dominio	Endosialidase catalytic domain (PF12219)	603	759	endocat2	InterProScan v5.77 Pfam-A
+CDS_0019	F58V	921	dominio	Endosialidase chaperone (PF13884)	760	819	endoflank2	InterProScan v5.77 Pfam-A

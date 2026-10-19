@@ -1,0 +1,6 @@
+Foldseek easy-search
+fecha: 2026-10-15T20:16:13Z
+version (commit): 941cd33ff0771cd2e3f144e3293e22a2b87e9fda
+consulta: modelo AlphaFold3 fold_2026_03_18_19_32_model_1.cif, cadena A (CDS_0012 residuos 344-1017)
+base: PDB (PDB100) descargada de RCSB el 2026-10-15
+comando: foldseek easy-search query_CDS_0012_A.pdb pdb100 result.tsv tmp -e 10 --max-seqs 2000
