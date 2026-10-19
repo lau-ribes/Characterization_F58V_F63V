@@ -331,7 +331,7 @@ database build date, the Foldseek commit and the exact command.
 
 ## Data availability
 
-Genome sequences: NCBI GenBank **PZ445148** (F58V), **PZ445149** (F63V). All
+Genome sequences: NCBI GenBank **PZ445148.1** (F58V), **PZ445149.1** (F63V). All
 other data supporting the findings of the study are in the manuscript, its
 supplementary information, and this repository. Phenotypic raw data, including
 the biofilm, efficiency of plating and lysis-curve measurements, are tabulated
