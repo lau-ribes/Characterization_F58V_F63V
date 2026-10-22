@@ -5,8 +5,7 @@
 This repository holds the input files and primary outputs of the bioinformatic
 analyses supporting the manuscript:
 
-> **Depolymerase architecture parallels activity against preformed biofilms
-> in two phages of ESBL-producing *Escherichia coli***
+> **Depolymerase architecture and activity against preformed biofilms in two phages targeting ESBL-producing *Escherichia coli***
 > Ribes-Martinez et al., *Scientific Reports* (in revision, 2026)
 
 Two lytic bacteriophages isolated from hospital wastewater (Hospital
