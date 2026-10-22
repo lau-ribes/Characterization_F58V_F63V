@@ -2,11 +2,11 @@
 """
 Genomic null distribution of protein identity for F58V CDS across Phapecoctavirus.
 
-Recomputes the null distribution against which the conservation of the
-tail-associated colanic acid depolymerase (CDS_0012) is assessed, directly from
-the deposited tBLASTn output. Standard library only; no dependencies.
+Recomputes, from the deposited tBLASTn output, the null distribution against
+which the conservation of the tail-associated colanic acid depolymerase
+(CDS_0012) is assessed. Standard library only.
 
-INPUTS
+Inputs
   blast_all_cds.tsv   tBLASTn of all F58V CDS against the Phapecoctavirus
                       reference genomes, outfmt 6 with the columns:
                       qseqid sseqid pident length qlen slen evalue bitscore
@@ -15,38 +15,38 @@ INPUTS
   --refset FILE       optional; one subject accession per line. If omitted,
                       every subject present in the tBLASTn output is used.
 
-METHOD (every choice below is a parameter, not a hidden default)
+Method
   1. Ortholog identity. For each (query CDS, subject genome) pair, the identity
-     of the LONGEST HSP is taken as the identity of the ortholog. The longest
-     HSP, not the one with the highest percent identity: where tBLASTn splits a
-     gene into a long alignment and a short one, the short fragment often scores
-     higher and is not representative. For CDS_0012 in OR067838.1, for example,
-     the HSPs are 924 aa at 98.701% and 103 aa at 99.029%.
+     of the longest HSP is taken as the identity of the ortholog, not that of
+     the HSP with the highest percent identity: where tBLASTn splits a gene
+     into a long alignment and a short one, the short fragment often scores
+     higher and is not representative. For CDS_0012 in OR067838.1 the two
+     longest HSPs are 924 aa at 98.701% and 103 aa at 99.029%.
   2. Ortholog coverage. tBLASTn fragments long alignments into several HSPs, so
-     coverage is the SUM of HSP lengths for that pair divided by the query
-     length. Using a single HSP instead would spuriously drop long proteins
-     such as CDS_0012 (1017 aa).
-  3. An ortholog is called when coverage >= MIN_COV and identity >= MIN_ID.
-  4. Core CDS are those with a called ortholog in EVERY genome of the
+     coverage is the sum of HSP lengths for that pair divided by the query
+     length. A single HSP would spuriously drop long proteins such as CDS_0012
+     (1017 aa).
+  3. An ortholog is called when coverage >= --min-cov and identity >= --min-id.
+  4. Core CDS are those with a called ortholog in every genome of the
      reference set. Only core CDS enter the null distribution.
-  5. The statistic per core CDS is the MEDIAN ortholog identity across the
+  5. The statistic per core CDS is the median ortholog identity across the
      reference set.
   6. The percentile of a focal gene is the proportion of core CDS whose median
-     identity is <= that of the focal gene, expressed as a percentage. This
-     convention is stated because the alternative (strictly <) gives a
-     materially different number when many CDS are at 100% identity.
+     identity is <= that of the focal gene, as a percentage. The alternative
+     (strictly <) gives a materially different number when many CDS are at
+     100% identity.
 
-OUTPUTS
+Outputs, written to the current working directory
   null_distribution_per_cds.tsv   one row per CDS with a called ortholog in at
                                   least one reference genome
   null_distribution_summary.txt   parameters, counts and the focal-gene and
                                   housekeeping comparisons
 
-USAGE
-  python3 null_distribution.py blast_all_cds.tsv F58V_pharokka.gbk
-  python3 null_distribution.py blast_all_cds.tsv F58V_pharokka.gbk --refset refs.txt
+Usage, from blast_results/conservation/
+  python3 null_distribution_metodo.py ../blast_all_cds.tsv ../../annotation/F58V_pharokka.gbk
+  add --refset refs.txt to restrict the reference set
 
-Ribes-Martinez et al. Script deposited alongside the data it reads.
+Ribes-Martinez et al.
 """
 
 import argparse
@@ -55,7 +55,7 @@ import statistics as st
 import sys
 from collections import defaultdict
 
-# --- Parameters -------------------------------------------------------------
+# Defaults; --min-cov and --min-id override the first two.
 MIN_COV = 0.80          # minimum summed-HSP coverage of the query
 MIN_ID = 70.0           # minimum longest-HSP amino acid identity (%)
 FOCAL = "CDS_0012"      # the gene whose percentile is reported

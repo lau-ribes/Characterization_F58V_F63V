@@ -1,0 +1,306 @@
+locus_tag	product	n_orthologs	n_reference_genomes	median_identity	in_core	percentile
+CDS_0001	DNA polymerase I	46	46	100.000	yes	100.0
+CDS_0002	hypothetical protein	46	46	98.413	yes	24.2
+CDS_0003	hypothetical protein	46	46	98.182	yes	22.4
+CDS_0004	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0005	nucleotidyltransferase	46	46	98.985	yes	33.9
+CDS_0006	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0007	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0008	tail protein	22	46	99.593	no	NA
+CDS_0009	hypothetical protein	46	46	95.238	yes	6.7
+CDS_0010	tail protein	46	46	100.000	yes	100.0
+CDS_0011	tail fiber protein	45	46	98.813	no	NA
+CDS_0012	colanic acid degradation	46	46	99.607	yes	50.3
+CDS_0013	lipoprotein	46	46	100.000	yes	100.0
+CDS_0014	tail fiber assembly protein	39	46	98.343	no	NA
+CDS_0015	tail fiber protein	39	46	98.867	no	NA
+CDS_0016	baseplate protein	46	46	100.000	yes	100.0
+CDS_0017	baseplate wedge subunit	46	46	99.192	yes	37.6
+CDS_0018	membrane protein	46	46	93.671	yes	3.6
+CDS_0019	tail protein	8	46	99.023	no	NA
+CDS_0020	hypothetical protein	46	46	98.745	yes	29.7
+CDS_0021	tail protein	46	46	99.269	yes	38.8
+CDS_0022	tail fiber protein	46	46	99.363	yes	41.2
+CDS_0023	hypothetical protein	46	46	99.519	yes	46.1
+CDS_0024	baseplate spike	46	46	100.000	yes	100.0
+CDS_0025	baseplate hub	46	46	100.000	yes	100.0
+CDS_0026	virion structural protein	46	46	100.000	yes	100.0
+CDS_0027	tail fiber protein	46	46	99.571	yes	48.5
+CDS_0028	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0029	tail length tape measure protein	46	46	99.359	yes	40.6
+CDS_0030	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0031	tail assembly chaperone	46	46	100.000	yes	100.0
+CDS_0032	virion structural protein	45	46	100.000	no	NA
+CDS_0033	tail sheath	46	46	100.000	yes	100.0
+CDS_0034	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0035	minor head protein	45	46	97.945	no	NA
+CDS_0036	tail completion or Neck1 protein	46	46	99.333	yes	40.0
+CDS_0037	hypothetical protein	46	46	99.451	yes	43.0
+CDS_0038	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0039	major head protein	46	46	99.700	yes	52.7
+CDS_0040	head decoration	46	46	100.000	yes	100.0
+CDS_0041	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0042	DNA methyltransferase	46	46	100.000	yes	100.0
+CDS_0043	portal protein	46	46	99.808	yes	53.9
+CDS_0044	terminase large subunit	46	46	99.855	yes	54.5
+CDS_0045	Rz-like spanin	46	46	100.000	yes	100.0
+CDS_0046	hypothetical protein	46	46	93.182	yes	2.4
+CDS_0047	hypothetical protein	46	46	96.552	yes	10.9
+CDS_0048	hypothetical protein	46	46	98.214	yes	23.0
+CDS_0049	hypothetical protein	45	46	97.727	no	NA
+CDS_0050	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0051	hypothetical protein	46	46	98.148	yes	21.2
+CDS_0052	hypothetical protein	41	46	98.077	no	NA
+CDS_0053	hypothetical protein	45	46	93.750	no	NA
+CDS_0054	hypothetical protein	46	46	97.222	yes	14.5
+CDS_0055	hypothetical protein	42	46	100.000	no	NA
+CDS_0056	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0057	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0058	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0059	hypothetical protein	44	46	97.561	no	NA
+CDS_0060	hypothetical protein	46	46	99.065	yes	35.8
+CDS_0061	hypothetical protein	45	46	92.105	no	NA
+CDS_0062	hypothetical protein	45	46	100.000	no	NA
+CDS_0063	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0064	hypothetical protein	44	46	93.333	no	NA
+CDS_0065	hypothetical protein	43	46	98.925	no	NA
+CDS_0066	hypothetical protein	43	46	98.333	no	NA
+CDS_0067	hypothetical protein	43	46	98.182	no	NA
+CDS_0068	hypothetical protein	43	46	96.795	no	NA
+CDS_0069	hypothetical protein	42	46	81.579	no	NA
+CDS_0070	hypothetical protein	35	46	100.000	no	NA
+CDS_0071	hypothetical protein	43	46	94.068	no	NA
+CDS_0072	phosphoesterase	42	46	100.000	no	NA
+CDS_0073	NA	41	46	98.387	no	NA
+CDS_0074	ATPase	41	46	99.254	no	NA
+CDS_0075	hol-like chemotaxis	42	46	100.000	no	NA
+CDS_0076	hypothetical protein	42	46	99.207	no	NA
+CDS_0077	hypothetical protein	42	46	97.260	no	NA
+CDS_0078	ATP-dependent DNA ligase	45	46	99.191	no	NA
+CDS_0079	hypothetical protein	33	46	96.875	no	NA
+CDS_0081	nucleotide pyrophosphohydrolase	46	46	99.585	yes	49.1
+CDS_0082	exonuclease recombination-associated	46	46	99.658	yes	52.1
+CDS_0083	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0084	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0085	hypothetical protein	46	46	97.500	yes	17.0
+CDS_0086	exonuclease	46	46	100.000	yes	100.0
+CDS_0087	DNA polymerase exonuclease subunit	46	46	100.000	yes	100.0
+CDS_0088	hypothetical protein	45	46	98.667	no	NA
+CDS_0089	hypothetical protein	46	46	98.496	yes	26.7
+CDS_0090	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0091	HNH endonuclease	46	46	99.457	yes	43.6
+CDS_0092	unknown function	46	46	100.000	yes	100.0
+CDS_0093	thymidylate synthase	46	46	99.398	yes	42.4
+CDS_0094	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0095	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0096	ribonucleotide reductase large subunit	46	46	98.928	yes	32.7
+CDS_0097	hypothetical protein	12	46	91.071	no	NA
+CDS_0098	NA	46	46	99.723	yes	53.3
+CDS_0099	hypothetical protein	46	46	98.551	yes	27.3
+CDS_0100	hypothetical protein	45	46	94.000	no	NA
+CDS_0101	hypothetical protein	45	46	98.148	no	NA
+CDS_0102	hypothetical protein	39	46	93.519	no	NA
+CDS_0103	5-epimerase	46	46	95.798	yes	9.1
+CDS_0104	5-epimerase	46	46	100.000	yes	100.0
+CDS_0105	nucleotide-sugar epimerase	46	46	98.571	yes	27.9
+CDS_0106	thioredoxin domain	46	46	100.000	yes	100.0
+CDS_0107	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0108	hypothetical protein	46	46	99.398	yes	42.4
+CDS_0109	PhoH-like phosphate starvation-inducible	46	46	100.000	yes	100.0
+CDS_0110	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0111	peptidase HslV family	46	46	100.000	yes	100.0
+CDS_0112	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0113	DNA methyltransferase	46	46	100.000	yes	100.0
+CDS_0114	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0115	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0116	hypothetical protein	46	46	98.438	yes	24.8
+CDS_0117	histidyl tRNA synthetase	46	46	99.474	yes	44.8
+CDS_0118	hypothetical protein	46	46	99.541	yes	46.7
+CDS_0119	NinI-like serine-threonine phosphatase	46	46	99.595	yes	49.7
+CDS_0120	hypothetical protein	46	46	98.039	yes	20.6
+CDS_0121	DprA-like DNA recombination-mediator protein	46	46	100.000	yes	100.0
+CDS_0122	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0123	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0124	hypothetical protein	46	46	98.462	yes	26.1
+CDS_0125	hypothetical protein	23	46	100.000	no	NA
+CDS_0126	hypothetical protein	46	46	97.222	yes	14.5
+CDS_0127	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0128	hypothetical protein	46	46	99.042	yes	35.2
+CDS_0129	hypothetical protein	44	46	98.473	no	NA
+CDS_0130	DNA methyltransferase	46	46	99.559	yes	47.9
+CDS_0131	hypothetical protein	36	46	70.320	no	NA
+CDS_0132	hypothetical protein	41	46	87.943	no	NA
+CDS_0133	Sir2 (NAD-dependent deacetylase)	43	46	74.908	no	NA
+CDS_0134	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0135	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0136	hypothetical protein	46	46	98.925	yes	32.1
+CDS_0137	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0138	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0139	hypothetical protein	46	46	99.010	yes	34.5
+CDS_0140	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0141	hypothetical protein	46	46	98.182	yes	22.4
+CDS_0142	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0143	DNA ligase	46	46	98.462	yes	26.1
+CDS_0144	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0145	hypothetical protein	46	46	98.592	yes	28.5
+CDS_0146	hypothetical protein	46	46	96.774	yes	11.5
+CDS_0147	hypothetical protein	46	46	97.101	yes	12.7
+CDS_0148	hypothetical protein	46	46	95.683	yes	7.9
+CDS_0149	hypothetical protein	45	46	100.000	no	NA
+CDS_0150	hypothetical protein	46	46	94.030	yes	4.8
+CDS_0151	hypothetical protein	46	46	94.643	yes	6.1
+CDS_0152	hypothetical protein	46	46	99.507	yes	45.5
+CDS_0153	hypothetical protein	46	46	98.889	yes	30.9
+CDS_0154	hypothetical protein	46	46	98.347	yes	23.6
+CDS_0155	hypothetical protein	46	46	94.118	yes	5.5
+CDS_0156	DNA invertase	46	46	100.000	yes	100.0
+CDS_0157	hypothetical protein	45	46	95.714	no	NA
+CDS_0158	hypothetical protein	45	46	99.065	no	NA
+CDS_0159	hypothetical protein	44	46	96.970	no	NA
+CDS_0160	hypothetical protein	14	46	99.457	no	NA
+CDS_0161	hypothetical protein	20	46	84.932	no	NA
+CDS_0162	hypothetical protein	44	46	96.000	no	NA
+CDS_0163	hypothetical protein	1	46	95.370	no	NA
+CDS_0164	hypothetical protein	35	46	98.889	no	NA
+CDS_0165	hypothetical protein	44	46	98.462	no	NA
+CDS_0166	hypothetical protein	44	46	98.750	no	NA
+CDS_0167	hypothetical protein	45	46	98.851	no	NA
+CDS_0168	hypothetical protein	42	46	94.933	no	NA
+CDS_0169	hypothetical protein	45	46	98.485	no	NA
+CDS_0170	hypothetical protein	45	46	95.588	no	NA
+CDS_0171	hypothetical protein	45	46	98.630	no	NA
+CDS_0172	hypothetical protein	43	46	96.774	no	NA
+CDS_0173	hypothetical protein	41	46	98.485	no	NA
+CDS_0175	hypothetical protein	44	46	96.552	no	NA
+CDS_0176	hypothetical protein	12	46	96.639	no	NA
+CDS_0177	hypothetical protein	12	46	98.413	no	NA
+CDS_0178	hypothetical protein	32	46	98.438	no	NA
+CDS_0179	hypothetical protein	44	46	98.361	no	NA
+CDS_0180	hypothetical protein	23	46	98.551	no	NA
+CDS_0181	hypothetical protein	42	46	98.990	no	NA
+CDS_0182	hypothetical protein	44	46	94.483	no	NA
+CDS_0183	hypothetical protein	25	46	92.763	no	NA
+CDS_0184	hypothetical protein	29	46	92.810	no	NA
+CDS_0185	hypothetical protein	38	46	98.734	no	NA
+CDS_0186	hypothetical protein	35	46	100.000	no	NA
+CDS_0187	hypothetical protein	36	46	98.551	no	NA
+CDS_0188	hypothetical protein	36	46	95.041	no	NA
+CDS_0189	hypothetical protein	45	46	95.349	no	NA
+CDS_0190	hypothetical protein	46	46	95.556	yes	7.3
+CDS_0191	hypothetical protein	46	46	93.182	yes	2.4
+CDS_0192	hypothetical protein	1	46	100.000	no	NA
+CDS_0194	hypothetical protein	46	46	93.333	yes	3.0
+CDS_0196	hypothetical protein	33	46	92.105	no	NA
+CDS_0197	hypothetical protein	30	46	98.561	no	NA
+CDS_0198	hypothetical protein	30	46	96.552	no	NA
+CDS_0199	hypothetical protein	34	46	96.311	no	NA
+CDS_0200	hypothetical protein	18	46	100.000	no	NA
+CDS_0202	hypothetical protein	10	46	98.413	no	NA
+CDS_0203	hypothetical protein	36	46	90.909	no	NA
+CDS_0204	hypothetical protein	38	46	94.681	no	NA
+CDS_0205	hypothetical protein	31	46	97.436	no	NA
+CDS_0206	hypothetical protein	39	46	98.990	no	NA
+CDS_0207	hypothetical protein	41	46	97.656	no	NA
+CDS_0208	hypothetical protein	37	46	100.000	no	NA
+CDS_0209	hypothetical protein	41	46	91.228	no	NA
+CDS_0210	hypothetical protein	18	46	97.778	no	NA
+CDS_0211	hypothetical protein	39	46	98.214	no	NA
+CDS_0212	hypothetical protein	40	46	99.099	no	NA
+CDS_0213	hypothetical protein	2	46	98.572	no	NA
+CDS_0214	hypothetical protein	11	46	100.000	no	NA
+CDS_0215	hypothetical protein	42	46	94.340	no	NA
+CDS_0216	membrane protein	41	46	97.436	no	NA
+CDS_0217	hypothetical protein	43	46	99.029	no	NA
+CDS_0218	hypothetical protein	43	46	98.529	no	NA
+CDS_0219	hypothetical protein	43	46	98.361	no	NA
+CDS_0220	hypothetical protein	43	46	100.000	no	NA
+CDS_0221	hypothetical protein	43	46	100.000	no	NA
+CDS_0222	hypothetical protein	42	46	98.630	no	NA
+CDS_0223	hypothetical protein	41	46	94.545	no	NA
+CDS_0224	hypothetical protein	26	46	94.366	no	NA
+CDS_0225	hypothetical protein	45	46	96.000	no	NA
+CDS_0226	hypothetical protein	34	46	92.405	no	NA
+CDS_0227	hypothetical protein	45	46	98.347	no	NA
+CDS_0228	hypothetical protein	28	46	100.000	no	NA
+CDS_0229	hypothetical protein	28	46	100.000	no	NA
+CDS_0230	hypothetical protein	46	46	98.919	yes	31.5
+CDS_0231	hypothetical protein	46	46	98.824	yes	30.3
+CDS_0232	hypothetical protein	46	46	97.980	yes	19.4
+CDS_0233	hypothetical protein	45	46	93.846	no	NA
+CDS_0234	hypothetical protein	43	46	94.286	no	NA
+CDS_0235	hypothetical protein	45	46	97.917	no	NA
+CDS_0236	hypothetical protein	43	46	95.312	no	NA
+CDS_0237	hypothetical protein	43	46	100.000	no	NA
+CDS_0238	hypothetical protein	44	46	90.909	no	NA
+CDS_0239	hypothetical protein	45	46	97.368	no	NA
+CDS_0241	hypothetical protein	45	46	92.222	no	NA
+CDS_0242	hypothetical protein	10	46	99.194	no	NA
+CDS_0243	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0244	endonuclease	29	46	87.097	no	NA
+CDS_0245	endonuclease	4	46	98.945	no	NA
+CDS_0246	ATPase	46	46	100.000	yes	100.0
+CDS_0247	hypothetical protein	46	46	99.153	yes	37.0
+CDS_0248	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0249	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0250	hypothetical protein	45	46	97.590	no	NA
+CDS_0251	hypothetical protein	46	46	99.107	yes	36.4
+CDS_0252	hypothetical protein	45	46	98.276	no	NA
+CDS_0253	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0254	hypothetical protein	46	46	97.368	yes	15.2
+CDS_0255	hypothetical protein	11	46	99.387	no	NA
+CDS_0256	hypothetical protein	46	46	97.917	yes	18.8
+CDS_0257	hypothetical protein	46	46	91.331	yes	1.2
+CDS_0258	hypothetical protein	46	46	95.688	yes	8.5
+CDS_0259	hypothetical protein	46	46	95.833	yes	9.7
+CDS_0260	hypothetical protein	27	46	92.523	no	NA
+CDS_0261	hypothetical protein	46	46	97.674	yes	18.2
+CDS_0262	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0263	hypothetical protein	46	46	97.115	yes	13.3
+CDS_0264	hypothetical protein	45	46	98.462	no	NA
+CDS_0265	hypothetical protein	46	46	93.820	yes	4.2
+CDS_0266	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0267	hypothetical protein	44	46	100.000	no	NA
+CDS_0268	hypothetical protein	43	46	98.039	no	NA
+CDS_0270	hypothetical protein	19	46	100.000	no	NA
+CDS_0271	hypothetical protein	45	46	100.000	no	NA
+CDS_0272	ribonucleotide reductase NrdA-like	35	46	98.361	no	NA
+CDS_0273	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0274	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0275	DNA helicase	46	46	99.623	yes	51.5
+CDS_0276	hypothetical protein	45	46	98.795	no	NA
+CDS_0277	histidyl tRNA synthetase	45	46	82.873	no	NA
+CDS_0278	ribonucleotide reductase	21	46	99.567	no	NA
+CDS_0279	anaerobic ribonucleoside reductase large subunit	45	46	99.486	no	NA
+CDS_0280	anaerobic ribonucleotide reductase small subunit	46	46	100.000	yes	100.0
+CDS_0281	hypothetical protein	46	46	96.825	yes	12.1
+CDS_0282	hypothetical protein	46	46	98.010	yes	20.0
+CDS_0283	hydrolase	45	46	77.064	no	NA
+CDS_0284	hypothetical protein	46	46	99.273	yes	39.4
+CDS_0285	phosphatase	46	46	83.060	yes	0.6
+CDS_0287	membrane protein	45	46	99.074	no	NA
+CDS_0288	hypothetical protein	46	46	97.414	yes	15.8
+CDS_0289	hypothetical protein	46	46	96.226	yes	10.3
+CDS_0290	hypothetical protein	46	46	97.462	yes	16.4
+CDS_0291	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0292	tellurite resistance	46	46	99.459	yes	44.2
+CDS_0293	hypothetical protein	40	46	100.000	no	NA
+CDS_0294	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0295	hypothetical protein	14	46	98.485	no	NA
+CDS_0296	hypothetical protein	46	46	98.930	yes	33.3
+CDS_0297	hypothetical protein	3	46	98.913	no	NA
+CDS_0298	hypothetical protein	46	46	99.242	yes	38.2
+CDS_0299	hypothetical protein	46	46	97.561	yes	17.6
+CDS_0300	hypothetical protein	10	46	99.438	no	NA
+CDS_0301	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0302	endolysin	46	46	100.000	yes	100.0
+CDS_0303	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0304	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0305	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0306	glycosyltransferase	46	46	100.000	yes	100.0
+CDS_0307	glycosyltransferase	46	46	99.559	yes	47.9
+CDS_0308	glycosyltransferase	45	46	99.048	no	NA
+CDS_0309	glycosyltransferase	44	46	99.342	no	NA
+CDS_0310	hypothetical protein	46	46	100.000	yes	100.0
+CDS_0311	DNA primase/helicase	46	46	100.000	yes	100.0
+CDS_0312	hypothetical protein	46	46	98.601	yes	29.1
+CDS_0313	hypothetical protein	46	46	99.621	yes	50.9

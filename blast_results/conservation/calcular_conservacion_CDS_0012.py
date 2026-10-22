@@ -1,37 +1,30 @@
 #!/usr/bin/env python3
 """
-Conservacion de F58V CDS_0012 (depolimerasa de acido colanico) a nivel
-intragenero, recalculada desde la salida de tBLASTn depositada.
+Intra-genus conservation of F58V CDS_0012 (colanic acid depolymerase),
+recomputed from the deposited tBLASTn output. Standard library only.
 
-Produce los dos ficheros que sostienen el bloque intragenero de la Tabla
-Suplementaria 6, y la evidencia por la que se descarta la otra salida de
-tBLASTn que hay en el archivo. Solo biblioteca estandar.
+Writes the two tables behind the intra-genus block of Supplementary Table 6
+and shows why the second tBLASTn output in this folder is not used for it.
 
-ENTRADAS (en la misma carpeta que este script)
-  tblastn_all_cds_46genomas.tsv
-      tBLASTn de las 313 CDS de F58V contra los 46 genomas de referencia de
-      Phapecoctavirus. Copia de blast_results/blast_all_cds.tsv del archivo de
-      reproducibilidad. outfmt 6 con columnas:
-      qseqid sseqid pident length qlen slen evalue bitscore
+Inputs, paths relative to this script
+  ../blast_all_cds.tsv
+      tBLASTn of the 313 F58V CDS against the 46 Phapecoctavirus reference
+      genomes, outfmt 6: qseqid sseqid pident length qlen slen evalue bitscore.
   tblastn_CDS_0012_65subjects.tsv
-      tBLASTn de CDS_0012 sola contra una base distinta y mas amplia. Copia de
-      blast_results/blast_depolymerase.tsv. outfmt 6 con 14 columnas:
-      qseqid sseqid pident length mismatch gapopen qstart qend sstart send
-      evalue bitscore qlen slen
-      No se usa para la tabla. Se procesa solo para documentar por que.
+      tBLASTn of CDS_0012 alone against a different, broader database,
+      outfmt 6 with 14 columns: qseqid sseqid pident length mismatch gapopen
+      qstart qend sstart send evalue bitscore qlen slen.
+      Not used for the table; processed only to document why.
 
-METODO
-  El mismo que declara null_distribution.py, depositado en el archivo, para que
-  las cifras de la Tabla S6 y las de la distribucion nula sean comparables:
-    - identidad del ortologo = identidad del HSP MAS LARGO. tBLASTn parte los
-      genes largos en varios HSP y el fragmento corto suele puntuar mas alto
-      sin ser representativo.
-    - cobertura del ortologo = SUMA de las longitudes de los HSP dividida por
-      la longitud de la consulta. Puede pasar del 100% cuando los HSP se
-      solapan; eso se informa tal cual y no se recorta.
-    - E-value del ortologo = el mejor de sus HSP.
+Method, the same as in null_distribution_metodo.py so that both sets of
+figures are comparable
+  identity  longest HSP. tBLASTn splits long genes into several HSPs, and the
+            short fragment often scores higher without being representative.
+  coverage  summed HSP length / query length. It exceeds 100% when HSPs
+            overlap and is reported uncapped.
+  E-value   best HSP.
 
-SALIDAS
+Outputs
   conservacion_CDS_0012_46genomas.tsv
   duplicados_en_tblastn_65subjects.tsv
 """
@@ -80,7 +73,7 @@ def resumir(hsps, qlen_consulta):
 
 def main():
     hsps46, slen46, qlens = leer(
-        "tblastn_all_cds_46genomas.tsv",
+        os.path.join("..", "blast_all_cds.tsv"),
         col_subject=1, col_pident=2, col_alen=3, col_evalue=6, col_slen=5, col_qlen=4)
     if not hsps46:
         sys.exit("No hay filas de %s en el fichero de 46 genomas" % QUERY)
@@ -107,7 +100,8 @@ def main():
     print("Cobertura >= 99.5%%          : %d de %d" % (sum(1 for c in cobs if c >= 99.5), len(cobs)))
     print("Escrito                     : %s" % os.path.basename(salida))
 
-    # Por que se descarta la otra salida
+    # 65-subject file: an extra subject with the same genome length as one of
+    # the 46 is counted as a RefSeq duplicate of it.
     hsps65, slen65, _ = leer(
         "tblastn_CDS_0012_65subjects.tsv",
         col_subject=1, col_pident=2, col_alen=3, col_evalue=10, col_slen=13)

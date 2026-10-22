@@ -1,59 +1,22 @@
-# ---------------------------------------------------------------------------
-# Figura 2. Arquitectura de dominios de CDS_0012 (F58V), CDS_0056 (F63V) y
-# CDS_0015 (F58V).
+# Figure 2: domain architecture of CDS_0012, CDS_0019 and CDS_0015 (F58V) and
+# CDS_0056 (F63V), with every feature drawn at its reported coordinates.
+# HHpred structural homology goes in a dashed lower lane because it overlaps
+# the domains; that lane is drawn for CDS_0056 and CDS_0015 only.
 #
-# POR QUE SE REHIZO (18 de octubre de 2026)
+# Input: dominios.tsv, compiled from
+#   InterProScan v5.77  ../annotation/interproScan/F58V_interproscan.tsv
+#                       ../annotation/interproScan/F63V_interproscan.tsv
+#   HHpred PDB_mmCIF70  ../annotation/HHpred/HHpred_F58V_CDS0015_tailfiber.hhr
+#                       ../annotation/HHpred/HHpred_F63V_CDS0056_tailfiber.hhr
+# CDS_0015 has no InterProScan hit.
 #
-# La version anterior tenia tres problemas, y solo uno era de etiqueta:
-#
-#   1. los dominios estaban dibujados uno detras de otro, no en sus
-#      coordenadas reales. En CDS_0012, PF18668 se dibujaba en ~120-336
-#      cuando InterProScan lo da en 302-361, y PF27800 en ~664-882 cuando
-#      esta en 502-662. De los cuatro dominios solo el primero caia donde
-#      le corresponde, porque empieza en el extremo N.
-#   2. por eso mismo WcaM aparecia a continuacion del plegamiento de pectin
-#      lyase cuando en realidad esta dentro de el (502-662 dentro de
-#      389-663). El propio texto del manuscrito da 502-662.
-#   3. CDS_0015 se dibujaba como una caja unica que cubria la proteina
-#      entera, etiquetada "Mu adhesin". El acierto de 5YVQ cubre 278-353,
-#      el quinto C-terminal, es a la cadena A, que es la fibra caudal y no
-#      una adhesina, y hay un segundo acierto, 9CUY, en 1-70. La proteina
-#      es composita y el tramo 71-277 no tiene asignacion.
-#
-# ESTETICA
-#
-# Se conserva la de la figura original a proposito, para que el cambio se
-# note en el contenido y no en el aspecto: los rellenos y los bordes se
-# muestrearon pixel a pixel del PNG antiguo, las etiquetas vuelven a ser
-# cajas redondeadas con linea de union, el esqueleto es el mismo gris, la
-# leyenda vuelve abajo a dos columnas y el lienzo tiene las mismas
-# proporciones (7,2 x 4,13 pulgadas, relacion 1,743).
-#
-# Lo unico que se anade al lenguaje visual es un carril inferior, de borde
-# discontinuo, para la homologia estructural de HHpred. Hace falta porque
-# esos tramos se solapan con los dominios y en un solo carril no se pueden
-# dibujar sin mentir sobre su extension, que es justo el error que se
-# corrige.
-#
-# FUENTES, todas depositadas
-#
-#   dominios.tsv se construye a partir de:
-#     InterProScan v5.77: F58V_interproscan.tsv, F63V_interproscan.tsv
-#     HHpred PDB_mmCIF70: hhpred_5018158.hhr (CDS_0015),
-#                         hhpred_6236217.hhr (CDS_0056)
-#   CDS_0015 no tiene ningun acierto de InterProScan: cero filas en el .tsv.
-#   CDS_0012 no tiene corrida de HHpred depositada, de modo que no lleva
-#   carril inferior.
-#
-# Uso: Rscript figura2.R
-# ---------------------------------------------------------------------------
+# Usage, from this folder: Rscript figura2.R
+
 suppressPackageStartupMessages(library(ggplot2))
 
-TIPO <- "Liberation Sans"   # metricamente igual a la Arial de la figura original
+TIPO <- "Liberation Sans"   # metric-compatible with Arial
 
-# CDS_0019 es la fila que decide Laura: si entra, la figura muestra las dos
-# tailspike con dominio catalitico de F58V; si no, solo la depolimerasa de
-# acido colanico. Ver la nota del 18 de octubre en el registro (bloque P).
+# FALSE drops CDS_0019 and writes the files without the _con_CDS_0019 suffix.
 INCLUIR_0019 <- TRUE
 
 d <- read.delim("dominios.tsv", stringsAsFactors = FALSE)
@@ -72,7 +35,6 @@ if (!INCLUIR_0019) {
 prot$etiqueta <- sprintf("%s\n%s (%s aa)", prot$proteina, prot$fago,
                          formatC(prot$longitud, big.mark = ","))
 
-# paleta muestreada pixel a pixel del PNG original
 relleno <- c(fibra = "#B5D4F4", tsp1 = "#9FE1CB", pectina = "#C0DD97",
              wcam  = "#FAC775", endocat = "#F0B3A0", endocat2 = "#F0B3A0",
              endoflank = "#F8E0D7", endoflank2 = "#F8E0D7",
@@ -91,11 +53,10 @@ nom <- c(fibra   = "Tail fibre N-terminal (PF26208)",
          hh9cuy  = "HHpred: short tail fibre 9CUY",
          hh5yvq  = "HHpred: tail fibre protein S 5YVQ (chain A)")
 
-# alturas en unidades de dato. La caja de dominio sale a 8,5% del lienzo, que
-# es la proporcion que tenia la figura original (106 px sobre 1240).
+# Heights in y-axis data units.
 ALTO   <- c(dominio = 0.70, plegamiento = 0.70, estructura = 0.50)
-ESQ    <- 0.105            # semialtura del esqueleto gris
-DESPL  <- -0.62            # carril estructural, por debajo del centro de fila
+ESQ    <- 0.105            # half-height of the grey backbone
+DESPL  <- -0.62            # HHpred lane offset below the row centre
 
 d <- merge(d, prot[, c("proteina", "y")], by = "proteina")
 d$y <- d$y + ifelse(d$pista == "estructura", DESPL, 0)
@@ -106,15 +67,13 @@ d$clave  <- factor(d$clave, levels = names(nom))
 d$rotulo <- sprintf("%s-%s", d$inicio, d$fin)
 d$ancho  <- d$fin - d$inicio
 
-# cuando un dominio queda encajado dentro de un plegamiento, el rotulo del
-# plegamiento se lleva a la parte que queda libre
+# WcaM lies inside the pectin lyase-like fold of CDS_0012, so the fold label
+# moves to the free stretch.
 d$x_rot <- (d$inicio + d$fin)/2
 d$x_rot[d$proteina == "CDS_0012" & d$clave == "pectina"] <- 445
 dentro <- subset(d, ancho >= 105)
 
-# etiquetas de llamada al estilo de la original: caja redondeada, linea de
-# union y texto del color del borde. De una sola linea, para no robar altura
-# a las barras.
+# Single-line callouts, so they do not take height from the bars.
 y19  <- if (INCLUIR_0019) prot$y[prot$proteina == "CDS_0019"] else NA
 yF63 <- prot$y[prot$proteina == "CDS_0056"]
 yF15 <- prot$y[prot$proteina == "CDS_0015"]
@@ -170,8 +129,7 @@ p <- ggplot() +
   scale_x_continuous(name = "Amino acid position", limits = c(1, 1035),
                      breaks = seq(0, 1000, 200),
                      expand = expansion(mult = c(0.015, 0.015))) +
-  # limites explicitos: si se dejan al expand automatico, las cajas de llamada
-  # de arriba y de abajo quedan cortadas por el borde del panel
+  # Explicit limits: automatic expansion clips the top and bottom callouts.
   coord_cartesian(ylim = c(min(prot$y) + DESPL - 0.75, 1.00), clip = "off") +
   guides(fill = guide_legend(ncol = 2, byrow = TRUE,
                              override.aes = list(linetype = "solid")),

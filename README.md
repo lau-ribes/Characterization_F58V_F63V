@@ -48,15 +48,19 @@ conflated. Each analysis states its own set:
 | tBLASTn conservation screen and genomic null distribution | 46 *Phapecoctavirus* genomes | `/blast_results`, `genomes/all_phapecoctavirus_accessions.txt` |
 | Codon-level selection and single-gene trees, F58V | F58V + 10 *Phapecoctavirus* genomes (nine for TerL) | `/phylogenetics`, `/selection_analysis` |
 
-One further figure in the manuscript has no input set of its own: the BLASTp
-search of CDS_0012 against the NCBI non-redundant protein database returned 65
-*Phapecoctavirus* subject genomes. Thirteen of those are RefSeq copies of
+One further figure in the manuscript has no input set of its own: a tBLASTn
+search of CDS_0012 returned 65 *Phapecoctavirus* subject genomes. Thirteen of those are RefSeq copies of
 genomes already present under their GenBank accession, leaving **52
-non-redundant genomes**, of which 47 carry the protein at or above 99.0%
-identity and 23 at or above 99.7%. The five below that threshold (LC739533,
+non-redundant genomes**, of which 46 carry the protein at or above 99.0%
+identity and 23 at or above 99.7%. Six fall below 99.0%: five (LC739533,
 LC739534, LC739535, LC739537, LC739539) carry a more divergent copy at 84.8 to
-85.1%. The raw output is `blast_results/blast_depol_all.tsv` and the
-duplicate-detection table is in `blast_results/conservation/`.
+85.1%, and OR067838 falls just short of the cut at 98.7%. The raw output is
+`blast_results/conservation/tblastn_CDS_0012_65subjects.tsv` (identical to
+`blast_results/blast_depolymerase.tsv`; the same hits in 8-column format are in
+`blast_results/blast_depol_all.tsv`), and the duplicate-detection table is
+`blast_results/conservation/duplicados_en_tblastn_65subjects.tsv`. The BLASTp
+search of CDS_0012 against the NCBI non-redundant protein database is a separate
+output, `blast_results/conservation/blastp_CDS_0012_vs_nr.tsv`.
 
 ---
 
@@ -118,7 +122,7 @@ each report:
 |---|---|---|---|---|---|
 | `HHpred_F63V_CDS0004_portal.hhr` | F63V CDS_0004 | 9KMH, portal protein | 100.0 | 1.3e-42 | 396 cols, query 1-400 |
 | `HHpred_F63V_CDS0056_tailfiber.hhr` | F63V CDS_0056 | 7VYV_B, K2 capsular depolymerase | 99.9 | 1.7e-21 | 411 cols, query 1-485 |
-| `HHpred_F58V_CDS0015_tailfiber.hhr` | F58V CDS_0015 | 5YVQ_A, tail fiber protein S of phage Mu | 97.7 | 1.8e-09 | 68 cols, query 278-353 |
+| `HHpred_F58V_CDS0015_tailfiber.hhr` | F58V CDS_0015 | 5YVQ_A, tail fiber protein S of phage Mu | 97.7 | 1.9e-04 | 68 cols, query 278-353 |
 | `HHpred_F58V_CDS0019_endosialidase.hhr` | F58V CDS_0019 | 4HIZ_A, endosialidase of *Escherichia* phage phi92 | 100.0 | 4.2e-97 | 682 cols, query 75-759 |
 | `HHpred_F58V_CDS0018_DUF2644.hhr` | F58V CDS_0018 | PF10841, DUF2644 | 99.9 | 2.0e-25 | 59 cols, query 14-73 |
 | `HHpred_F58V_CDS0218.hhr` | F58V CDS_0218 | PF09964, DUF2198 | 89.8 | 3.2 | 42 cols, query 13-54 |
@@ -137,10 +141,14 @@ CRISPR array and no spacer in either genome, so both output files are empty.
 
 ### `/blast_results`
 
-tBLASTn screens of F58V CDS against the 46-genome *Phapecoctavirus* reference
-set, plus the BLASTp output for CDS_0012 against the NCBI non-redundant
-database. Column order in the tBLASTn files:
-`qseqid sseqid pident length qlen slen evalue bitscore`.
+tBLASTn searches of F58V proteins against *Phapecoctavirus* genomes.
+`blast_all_cds.tsv` covers all F58V CDS against the 46-genome reference set,
+with columns `qseqid sseqid pident length qlen slen evalue bitscore`. The
+per-gene files (`blast_<gene>.tsv`) are searches of single proteins that
+returned between 52 and 65 subject genomes. Most use the 14-column format
+`qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue
+bitscore qlen slen`; `blast_depol_all.tsv` and `blast_methyltransferase.tsv`
+use the 8-column format above.
 
 `blast_all_cds.tsv` is the genome-wide screen from which the null distribution
 of protein identity was built, over the 165 core CDS with an ortholog in every
@@ -154,22 +162,29 @@ the figures in the Results can be reproduced step by step.
 
 - `blastp_CDS_0012_vs_nr.tsv`: BLASTp of CDS_0012 against the NCBI
   non-redundant protein database.
-- `tblastn_CDS_0012_65subjects.tsv`: the 65 *Phapecoctavirus* subject genomes
-  that search returned.
+- `tblastn_CDS_0012_65subjects.tsv`: the tBLASTn search of CDS_0012 that
+  returned the 65 *Phapecoctavirus* subject genomes.
 - `duplicados_en_tblastn_65subjects.tsv`: the genome-length matching that
   identifies RefSeq copies of genomes already present under their GenBank
   accession, which reduces those 65 to the 52 non-redundant genomes reported.
 - `conservacion_CDS_0012_46genomas.tsv`: per-genome identity and summed-HSP
   query coverage across the 46-genome reference set.
 - `calcular_conservacion_CDS_0012.py`, `null_distribution_metodo.py`: the two
-  scripts that produce the tables above and the null distribution.
+  scripts that produce the tables above and the null distribution. Usage is in
+  each script's docstring; both use only the Python standard library.
+- `null_distribution_summary.txt`, `null_distribution_per_cds.tsv`: the output
+  of `null_distribution_metodo.py` run from this directory on
+  `../blast_all_cds.tsv` and `../../annotation/F58V_pharokka.gbk`.
 
 ### `/phylogenetics`
 
 Single-gene maximum-likelihood trees, one subdirectory per gene. Each holds the
-protein alignment (`.fna`, MAFFT L-INS-i), the codon alignment (`_codon.fna`),
-the PHYLIP alignment (`.phy`), the guide tree (`.tree`), the IQ-TREE report
-(`.iqtree`) and the ML tree (`.treefile`). Eleven genes: depolymerase
+ortholog CDS sequences (`.fna`), the codon alignment (`_codon.fna`), the same
+alignment in PHYLIP format with PAML-compatible labels (`.phy`), the IQ-TREE
+report (`.iqtree`), the ML tree (`.treefile`) and the same tree with
+PAML-compatible labels, used as the codeml guide tree (`.tree`). The protein
+alignments from which the codon alignments were back-translated are not
+deposited. Eleven genes: depolymerase
 (CDS_0012), main_tail_fiber, TerL, baseplate_hub, endolysin, portal_protein,
 tail_sheath, major_head_protein, methyltransferase, DNA_helicase, DNA_primase.
 Alignments contain F58V plus ten *Phapecoctavirus* genomes, except TerL with
@@ -178,10 +193,16 @@ all eleven genes.
 
 `/phylogenetics/F63V_single_gene`: TerL and major capsid protein trees for
 F63V and its candidate relatives (Supplementary Figure 2). IQ-TREE v2.3.6,
-1,000 ultrafast bootstrap and 1,000 SH-aLRT replicates. The deposited runs are
-the fixed LG+F+G4 analyses; the ModelFinder-selected models reported in the
-Methods are LG+R2 for TerL and Q.pfam+I for MCP, and both give the same
-topology. TerL groups F63V with ES10, AN_ECEAS and IMM-001 (MF630922); MCP
+1,000 ultrafast bootstrap and 1,000 SH-aLRT replicates. Seven taxa: F63V, ES10,
+AN_ECEAS, IMM-001, Loudonvirus DTL and the two Braunvirinae outgroups NC_047810
+and NC_047812. The files in the top level are the fixed LG+F+G4 runs used for
+Supplementary Figure 2.
+
+`modelfinder_2026-09-23/` holds the model-selection reanalysis, described in the
+`README.md` of that directory. `*_mfp.*` are the ModelFinder runs reported in the
+Methods, which select LG+R2 for TerL and Q.pfam+I for MCP; `*_rep.*` reproduce
+the original fixed-model analysis, matching its log-likelihood to the fourth
+decimal. Both recover the same topology as the fixed-model trees. TerL groups F63V with ES10, AN_ECEAS and IMM-001 (MF630922); MCP
 instead groups F63V with *Loudonvirus* DTL, the single-gene discordance
 discussed in the manuscript.
 
@@ -213,7 +234,7 @@ the ICTV thresholds for *Caudoviricetes*, 95% and 70%.
 `VIRIDIC_F58V_Fig4c_sim-dist_table.tsv`, `VIRIDIC_F58V_Fig4c_cluster_table.tsv`
 and `VIRIDIC_F58V_Fig4c_heatmap.pdf` are the run shown in the manuscript: F58V
 and the 24 reference genomes flagged in Supplementary Table 5. The lowest
-pairwise value in the matrix is 83.99% and all 25 genomes fall in a single
+pairwise value in the matrix is 83.997% and all 25 genomes fall in a single
 genus cluster. F58V reaches 94.0% against the genus exemplar
 phAPEC8 (JX561091 / NC_020079), below the 95% species threshold, and 95.4%
 against the unclassified genome PNJ1809-36 (MT944117), marginally above it.
@@ -239,7 +260,10 @@ nearest genome is the basis of the genus-level proposal.
 ### `/selection_analysis`
 
 Codon-level selection analysis with PAML codeml v4.9j, one subdirectory per
-gene, each with the control file and the codeml output.
+gene, each with the control file and the codeml output. The control files read
+`paml_<gene>.phy` and `paml_<gene>.tree`, which are
+`phylogenetics/<gene>/<gene>.phy` and `<gene>.tree` under the names codeml
+expects.
 
 - All eleven F58V genes: one-ratio model M0.
 - Depolymerase (CDS_0012) and main tail fiber (CDS_0011): the site models
@@ -248,17 +272,24 @@ gene, each with the control file and the codeml output.
 Gene-wide ω under M0 spans two orders of magnitude, from DNA primase at 0.002
 to endolysin at 0.182. The depolymerase is at **ω = 0.020**, sixth of eleven
 and within the range of essential structural and replicative genes; the main
-tail fiber is at 0.093. Neither M1a/M2a nor M7/M8 supports a positively
-selected site class in the depolymerase. Absolute ω values depend on the
+tail fiber is at 0.093. In the depolymerase, M1a/M2a does not support a
+positively selected site class (2ΔlnL = 2.03, p = 0.36). M7/M8 is nominally
+significant (2ΔlnL = 15.89, p < 0.001), with 0.4% of sites at ω = 2.99, but no
+site reaches a Bayes empirical Bayes posterior above 0.95; the manuscript
+discusses this result. Absolute ω values depend on the
 composition of the reference set, so comparisons should be read as
 within-analysis contrasts between genes.
 
 `/selection_analysis/M3_per_site`: M3 (K = 3) NEB per-site dN/dS profiles
 (Supplementary Figure 1): `*_M3.out`, `*_M3_rst_persite.txt`,
-`Suppl_Fig_dNdS_persite.{pdf,svg}`. The four predicted catalytic residues
-(D554, Y562, W578, D656) fall in the most constrained site class; the only two
-sites with posterior support for positive selection (Y383, D434) lie outside
-the catalytic pocket.
+`Suppl_Fig_dNdS_persite.{pdf,svg}`. In the depolymerase, two of the three site
+classes are under strong purifying selection (ω = 0.011 and 0.012) and the
+third, 0.36% of sites, has ω = 3.03. The four predicted catalytic residues
+(D554, Y562, W578, D656) have a posterior probability of at most 0.002 for that
+third class; the only two sites assigned to it (Y383, D434; posterior > 0.99)
+lie outside the catalytic pocket. The M3 control file is not deposited; the M0
+control file with `NSsites = 3` and `ncatG = 3` reproduces the run (lnL
+-5742.779 against -5742.780 in `depolymerase_M3.out`).
 
 ### `/structural`
 

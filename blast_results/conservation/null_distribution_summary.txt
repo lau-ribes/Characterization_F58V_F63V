@@ -1,0 +1,37 @@
+Genomic null distribution of protein identity
+============================================================
+tBLASTn input      : ../blast_all_cds.tsv
+Annotation         : ../../annotation/F58V_pharokka.gbk
+Reference genomes  : 46 (all subjects in the tBLASTn output)
+Ortholog criteria  : summed-HSP coverage >= 80%, longest-HSP identity >= 70%
+Percentile         : proportion of core CDS with median identity <= focal
+
+CDS with >= 1 ortholog : 305
+Core CDS (all genomes) : 165
+Median of distribution : 99.607%
+
+CDS_0012 (colanic acid degradation)
+  median identity : 99.607%
+  percentile      : 50.3
+
+Curated housekeeping genes in the core set
+------------------------------------------------------------
+  CDS_0001    DNA polymerase I                           100.000%
+  CDS_0025    baseplate hub                              100.000%
+  CDS_0029    tail length tape measure protein            99.359%
+  CDS_0033    tail sheath                                100.000%
+  CDS_0039    major head protein                          99.700%
+  CDS_0043    portal protein                              99.808%
+  CDS_0044    terminase large subunit                     99.855%
+  CDS_0275    DNA helicase                                99.623%
+  CDS_0302    endolysin                                  100.000%
+  CDS_0311    DNA primase/helicase                       100.000%
+
+  median, housekeeping : 99.928%
+  median, CDS_0012      : 99.607%
+
+  No hypothesis test is reported. A single gene cannot be
+  tested against a reference group of ten: the smallest
+  attainable two-sided Mann-Whitney p for n1 = 1, n2 = 10
+  is 2/11 = 0.182, so any such p-value reports the sample
+  sizes rather than the data.

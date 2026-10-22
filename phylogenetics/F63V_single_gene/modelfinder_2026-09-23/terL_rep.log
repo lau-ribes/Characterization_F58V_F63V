@@ -1,0 +1,118 @@
+IQ-TREE multicore version 2.3.6 for Linux x86 64-bit built Aug  1 2024
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    vm (AVX512, FMA3, 7 GB RAM)
+Command: /tmp/iq/iqtree-2.3.6-Linux-intel/bin/iqtree2 -s terL.aln -m LG+F+G4 -B 1000 -alrt 1000 -T 2 --prefix terL_rep -quiet -redo
+Seed:    800378 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Sep 23 22:16:18 2026
+Kernel:  AVX+FMA - 2 threads (2 CPU cores detected)
+
+Reading alignment file terL.aln ... Fasta format detected
+Reading fasta file: done in 0.000136671 secs
+Alignment most likely contains protein sequences
+Alignment has 7 sequences with 540 columns, 144 distinct patterns
+54 parsimony-informative, 86 singleton sites, 400 constant sites
+             Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 1.3314e-05 secs using 90.13% CPU
+   1  DTL            3.15%    passed     99.82%
+   2  ES10           3.70%    passed    100.00%
+   3  AN_ECEAS       3.70%    passed    100.00%
+   4  IMM-001        3.33%    passed    100.00%
+   5  F63V           0.19%    passed    100.00%
+   6  OG_NC047810    3.52%    passed    100.00%
+   7  OG_NC047812    3.52%    passed    100.00%
+****  TOTAL          3.02%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: AN_ECEAS is identical to ES10 but kept for subsequent analysis
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.000 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 800378)...
+
+NOTE: 1 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -2549.944
+2. Current log-likelihood: -2545.601
+3. Current log-likelihood: -2545.424
+Optimal log-likelihood: -2545.423
+Gamma shape alpha: 0.525
+Parameters optimization took 3 rounds (0.060 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.00509181 secs using 239.1% CPU
+Computing ML distances took 0.005144 sec (of wall-clock time) 0.012228 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 2.6343e-05 secs using 98.7% CPU
+Computing RapidNJ tree took 0.000075 sec (of wall-clock time) 0.000075 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -2550.728
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.027 second
+Computing log-likelihood of 50 initial trees ... 0.116 seconds
+Current best score: -2545.423
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -2545.423
+Iteration 10 / LogL: -2545.433 / Time: 0h:0m:0s
+Iteration 20 / LogL: -2545.429 / Time: 0h:0m:0s
+Finish initializing candidate tree set (1)
+Current best tree score: -2545.423 / CPU time: 0.458
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -2545.424 / Time: 0h:0m:0s (0h:0m:1s left)
+Iteration 40 / LogL: -2545.424 / Time: 0h:0m:1s (0h:0m:1s left)
+Iteration 50 / LogL: -2545.444 / Time: 0h:0m:1s (0h:0m:1s left)
+Log-likelihood cutoff on original alignment: -2572.679
+Iteration 60 / LogL: -2545.426 / Time: 0h:0m:1s (0h:0m:1s left)
+UPDATE BEST LOG-LIKELIHOOD: -2545.423
+Iteration 70 / LogL: -2545.436 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 80 / LogL: -2545.427 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 90 / LogL: -2545.424 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 100 / LogL: -2546.001 / Time: 0h:0m:2s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -2572.679
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:0m:2s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -2545.423
+Optimal log-likelihood: -2545.423
+Gamma shape alpha: 0.525
+Parameters optimization took 1 rounds (0.006 sec)
+BEST SCORE FOUND : -2545.423
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+0.026 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file terL_rep.splits.nex
+Total tree length: 0.431
+
+Total number of iterations: 102
+CPU time used for tree search: 4.645 sec (0h:0m:4s)
+Wall-clock time used for tree search: 2.494 sec (0h:0m:2s)
+Total CPU time used: 4.853 sec (0h:0m:4s)
+Total wall-clock time used: 2.632 sec (0h:0m:2s)
+
+Computing bootstrap consensus tree...
+Reading input file terL_rep.splits.nex...
+7 taxa and 16 splits.
+Consensus tree written to terL_rep.contree
+Reading input trees file terL_rep.contree
+Log-likelihood of consensus tree: -2545.425
+
+Analysis results written to: 
+  IQ-TREE report:                terL_rep.iqtree
+  Maximum-likelihood tree:       terL_rep.treefile
+  Likelihood distances:          terL_rep.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          terL_rep.splits.nex
+  Consensus tree:                terL_rep.contree
+  Screen log file:               terL_rep.log
+
+Date and Time: Wed Sep 23 22:16:21 2026
